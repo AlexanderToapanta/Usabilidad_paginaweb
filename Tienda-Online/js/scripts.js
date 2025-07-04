@@ -1,7 +1,6 @@
 
 let sesionActiva = false;
 
-
 const PRODUCT_IDS = [
     'Silent_Hill2', 'DMC5', 'RE7', 'Skyrim', 'Bayoneta3', 'Switch', 
     'Play_Slim_4', 'Xbon_One_x', 'Mando_PS5', 'Audifonos_Argolla', 
