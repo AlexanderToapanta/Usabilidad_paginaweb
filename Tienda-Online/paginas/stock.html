@@ -1,0 +1,304 @@
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row justify-content-center">
+
+            <!-- DMC5 -->
+            <div class="col-md-5">
+                <div class="card h-100" id="DMC5">
+                    <img class="card-img-top" src="./public/img/DMC5.jpg" alt="Devil May Cry" />
+                    <div class="card-body p-4 text-center">
+                        <h5 class="fw-bolder">Devil May Cry 5</h5>
+                        <p class="card-text">$25.00</p>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <button class="btn btn-sm btn-danger mx-2" id="btn_restar_DMC5" onclick="disminuirStock('DMC5')">-</button>
+                            <p class="card-text stock-DMC5" id="stock_DMC5">Stock:</p>
+                            <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('DMC5')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resident Evil 7 -->
+            <div class="col-md-5">
+                <div class="card h-100" id="RE7">
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <img class="card-img-top" src="./public/img/RE7.webp" alt="Resident Evil" />
+                    <div class="card-body p-4 text-center">
+                        <h5 class="fw-bolder">Sale Item</h5>
+                        <h6 class="fw-bolder">Resident Evil 7</h6>
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div><div class="bi-star-fill"></div><div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div><div class="bi-star-fill"></div>
+                        </div>
+                        <span class="text-muted text-decoration-line-through">$20.00</span>
+                        <p class="card-text">$18.00</p>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <button class="btn btn-sm btn-danger mx-2" id="btn_restar_RE7" onclick="disminuirStock('RE7')">-</button>
+                            <p class="card-text stock-RE7" id="stock_RE7">Stock:</p>
+                            <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('RE7')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audífonos -->
+            <div class="col-md-5">
+                <div class="card h-100" id="Audifonos_Argolla">
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <img class="card-img-top" src="./public/img/audifonos.jpeg" alt="Audífonos" />
+                    <div class="card-body p-4 text-center">
+                        <h5 class="fw-bolder">Audífonos</h5>
+                        <span class="text-muted text-decoration-line-through">$70.00</span>
+                        <p class="card-text">$40.00</p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Audifonos_Argolla" onclick="disminuirStock('Audifonos_Argolla')">-</button>
+                        <p class="card-text stock-Audifonos_Argolla" id="stock_Audifonos_Argolla">Stock:</p>
+                        <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Audifonos_Argolla')">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bayonetta 3 -->
+            <div class="col-md-5">
+                <div class="card h-100" id="Bayoneta3">
+                    <img class="card-img-top" src="./public/img/Bayonetta-3.webp" alt="Bayonetta 3" />
+                    <div class="card-body p-4 text-center">
+                        <h5 class="fw-bolder">Popular Item</h5>
+                        <h6 class="fw-bolder">Bayonetta 3</h6>
+                        <p class="card-text">$35.00</p>
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Bayoneta3" onclick="disminuirStock('Bayoneta3')">-</button>
+                        <p class="card-text stock-Bayoneta3" id="stock_Bayoneta3">Stock:</p>
+                        <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Bayoneta3')">+</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Silent Hill 2 -->
+            <div class="col-md-5">
+                <div class="card h-100" id="Silent_Hill2">
+                    <img class="card-img-top" src="./public/img/silent.webp" alt="Silent Hill 2" />
+                    <div class="card-body p-4 text-center">
+                        <h5 class="fw-bolder">Silent Hill 2</h5>
+                        <p class="card-text">$45.00</p>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Silent_Hill2" onclick="disminuirStock('Silent_Hill2')">-</button>
+                            <p class="card-text stock-Silent_Hill2" id="stock_Silent_Hill2">Stock:</p>
+                            <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Silent_Hill2')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rust -->
+<div class="col-md-5">
+    <div class="card h-100" id="Rust">
+        <img class="card-img-top" src="./public/img/rust.avif" alt="Rust" />
+        <div class="card-body p-4 text-center">
+            <h5 class="fw-bolder">Rust</h5>
+            <p class="card-text">$50.00</p>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Rust" onclick="disminuirStock('Rust')">-</button>
+                <p class="card-text stock-Rust" id="stock_Rust">Stock:</p>
+                <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Rust')">+</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Baldur’s Gate 3 -->
+<div class="col-md-5">
+    <div class="card h-100" id="Baldurs_Gate3">
+        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+        <img class="card-img-top" src="./public/img/Baldurs.jpg" alt="Baldur’s Gate 3" />
+        <div class="card-body p-4 text-center">
+            <h5 class="fw-bolder">Baldur’s Gate 3</h5>
+            <span class="text-muted text-decoration-line-through">$70.00</span>
+            <p class="card-text">$65.00</p>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Baldurs_Gate3" onclick="disminuirStock('Baldurs_Gate3')">-</button>
+                <p class="card-text stock-Baldurs_Gate3" id="stock_Baldurs_Gate3">Stock:</p>
+                <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Baldurs_Gate3')">+</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Skyrim -->
+<div class="col-md-5">
+    <div class="card h-100" id="Skyrim">
+        <img class="card-img-top" src="./public/img/Skyrim.jpg" alt="Skyrim" />
+        <div class="card-body p-4 text-center">
+            <h5 class="fw-bolder">Skyrim</h5>
+            <p class="card-text">$50.00</p>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Skyrim" onclick="disminuirStock('Skyrim')">-</button>
+                <p class="card-text stock-Skyrim" id="stock_Skyrim">Stock:</p>
+                <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Skyrim')">+</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Oblivion -->
+<div class="col-md-5">
+    <div class="card h-100" id="Oblivion">
+        <img class="card-img-top" src="./public/img/oblivion.avif" alt="Oblivion" />
+        <div class="card-body p-4 text-center">
+            <h5 class="fw-bolder">Oblivion</h5>
+            <p class="card-text">$40.00</p>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Oblivion" onclick="disminuirStock('Oblivion')">-</button>
+                <p class="card-text stock-Oblivion" id="stock_Oblivion">Stock:</p>
+                <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Oblivion')">+</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-5 py-3">
+    <div class="card h-100" id="Expedition33">
+        <img class="card-img-top" src="./public/img/expedition.avif" alt="Bayonetta 3" />
+        <div class="card-body p-4">
+            <div class="text-center">
+                <h5 class="fw-bolder">New Arrive Item</h5>
+                <h6 class="fw-bolder">Expedition 33</h6>
+                <div class="d-flex justify-content-center small text-warning mb-2">
+                    <div class="bi-star-fill"></div><div class="bi-star-fill"></div><div class="bi-star-fill"></div>
+                    <div class="bi-star-fill"></div><div class="bi-star-fill"></div>
+                </div>
+                <p class="card-text">$75.00</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-3">
+            <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Expedition33" onclick="disminuirStock('Expedition33')">-</button>
+            <p class="card-text stock-Expedition33" id="stock_Expedition33">Stock:</p> 
+            <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Expedition33')">+</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-5">
+    <div class="card h-100" id="FatalFury">
+        <img class="card-img-top" src="./public/img/fatalfury.jpg" alt="Bayonetta 3" />
+        <div class="card-body p-4">
+            <div class="text-center">
+                <h5 class="fw-bolder">New Arrive Item</h5>
+                <h6 class="fw-bolder">Fatal Fury</h6>
+                <div class="d-flex justify-content-center small text-warning mb-2">
+                    <div class="bi-star-fill"></div><div class="bi-star-fill"></div><div class="bi-star-fill"></div>
+                    <div class="bi-star-fill"></div><div class="bi-star-fill"></div>
+                </div>
+                <p class="card-text">$70.00</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-3">
+            <button class="btn btn-sm btn-danger mx-2" id="btn_restar_FatalFury" onclick="disminuirStock('FatalFury')">-</button>
+            <p class="card-text stock-FatalFury" id="stock_FatalFury">Stock:</p> 
+            <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('FatalFury')">+</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-5">
+    <div class="card h-100" id="Switch">
+        <img class="card-img-top" src="./public/img/switch.jpg" alt="Devil May Cry" />
+        <div class="card-body p-4">
+            <div class="text-center">
+                <h5 class="fw-bolder">Switch</h5>
+                <p class="card-text">$250.00</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-3">
+            
+                <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Switch" onclick="disminuirStock('Switch')">-</button>
+                <p class="card-text stock-Switch" id="stock_Switch">Stock:</p> 
+                <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Switch')">+</button>
+            
+        </div>
+    </div>
+</div>
+
+<div class="col-md-5">
+    <div class="card h-100" id="Play_Slim_4">
+        <img class="card-img-top" src="./public/img/play4s.jpg" alt="Devil May Cry" />
+        <div class="card-body p-4">
+            <div class="text-center">
+                <h5 class="fw-bolder">Play Station 4 Slim</h5>
+                <p class="card-text">$400.00</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-3">
+            
+                <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Play_Slim_4" onclick="disminuirStock('Play_Slim_4')">-</button>
+                <p class="card-text stock-Play_Slim_4" id="stock_Play_Slim_4">Stock:</p> 
+                <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Play_Slim_4')">+</button>
+            
+        </div>
+    </div>
+</div>
+
+<div class="col-md-5">
+    <div class="card h-100" id="Xbon_One_x">
+        <img class="card-img-top" src="./public/img/Xbox-One-X-Lead_Consol_Hrz_Family.jpg" alt="Devil May Cry" />
+        <div class="card-body p-4">
+            <div class="text-center">
+                <h5 class="fw-bolder">Xbox One x</h5>
+                <p class="card-text">$400.00</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-3">
+            
+                <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Xbon_One_x" onclick="disminuirStock('Xbon_One_x')">-</button>
+                <p class="card-text stock-Xbon_One_x" id="stock_Xbon_One_x">Stock:</p> 
+                <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Xbon_One_x')">+</button>
+            
+        </div>
+    </div>
+</div>
+
+<div class="col-md-5">
+    <div class="card h-100" id="Mando_PS5">
+        <img class="card-img-top" src="./public/img/mando.webp" alt="Devil May Cry" />
+        <div class="card-body p-4">
+            <div class="text-center">
+                <h5 class="fw-bolder">New Arrive Item</h5>
+                <h5 class="fw-bolder">Mando PS5</h5>
+                <p class="card-text">$70.00</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-3">
+            
+                <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Mando_PS5" onclick="disminuirStock('Mando_PS5')">-</button>
+                <p class="card-text stock-Mando_PS5" id="stock_Mando_PS5">Stock:</p> 
+                <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Mando_PS5')">+</button>
+            
+        </div>
+    </div>
+</div>
+
+<div class="col-md-5">
+    <div class="card h-100" id="Cargador_Ps4">
+        <img class="card-img-top" src="./public/img/cargador.webp" alt="Devil May Cry" />
+        <div class="card-body p-4">
+            <div class="text-center">
+                <h5 class="fw-bolder">Cargador PS4</h5>
+                <p class="card-text">$45.00</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-3">
+            
+                <button class="btn btn-sm btn-danger mx-2" id="btn_restar_Cargador_Ps4" onclick="disminuirStock('Cargador_Ps4')">-</button>
+                <p class="card-text stock-Cargador_Ps4" id="stock_Cargador_Ps4">Stock:</p> 
+                <button class="btn btn-sm btn-success mx-2" onclick="aumentarStock('Cargador_Ps4')">+</button>
+           
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>

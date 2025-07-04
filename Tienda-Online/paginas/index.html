@@ -1,0 +1,139 @@
+<body>
+<header class="bg-dark py-5" id="header">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Tienda online del mundo de los videojuegos</h1>
+            <p class="lead fw-normal text-white-50 mb-0"> Videojuego, Perifericos y Consolas de la más alta calidad!!!  </p>
+        </div>
+    </div>
+</header>
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+            <!-- Producto 1 -->
+            <div class="col-md-5">
+                <div class="card h-100" id="DMC5">
+                    <img class="card-img-top" src="./public/img/DMC5.jpg" alt="Devil May Cry 5" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">Devil May Cry 5</h5>
+                            <p class="card-text">$25.00</p>
+                            <p class="card-text stock-DMC5" id="stock_DMC5">Stock: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col-md-5">
+                <div class="card h-100" id="RE7">
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <img class="card-img-top" src="./public/img/RE7.webp" alt="Resident Evil 7" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                             <h5 class="fw-bolder">Sale Item</h5>
+                            <h6 class="fw-bolder">Resident Evil 7</h6>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div><div class="bi-star-fill"></div><div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div><div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-muted text-decoration-line-through">$20.00</span>
+                            <p class="card-text">$18.00</p>
+                            <p class="card-text stock-RE7" id="stock_RE7">Stock: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col-md-5">
+                <div class="card h-100" id="Audifonos_Argolla">
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <img class="card-img-top" src="./public/img/audifonos.jpeg" alt="Audífonos" />
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">Audifonos</h5>
+                            <span class="text-muted text-decoration-line-through">$70.00</span>
+                            <p class="card-text">$40.00</p>
+                            <p class="card-text stock-Audifonos_Argolla" id="stock_Audifonos_Argolla">Stock: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col-md-5">
+                <div class="card h-100" id="Bayoneta3">
+                    <img class="card-img-top" src="./public/img/Bayonetta-3.webp" alt="Bayonetta 3" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">Popular Item</h5>
+                            <h6 class="fw-bolder">Bayonetta 3</h6>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div><div class="bi-star-fill"></div><div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div><div class="bi-star-fill"></div>
+                            </div>
+                            <p class="card-text">$35.00</p>
+                            <p class="card-text stock-Bayoneta3" id="stock_Bayoneta3">Stock: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5 py-3">
+                <div class="card h-100" id="Rust">
+                    <img class="card-img-top" src="./public/img/rust.avif" alt="Rust" />
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">Sale Item</h5>
+                            <h6 class="fw-bolder">Rust</h6>
+                            <span class="text-muted text-decoration-line-through">$40.00</span>
+                            <p class="card-text">$15.00</p>
+                            <p class="card-text stock-Rust" id="stock_Rust">Stock: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-md-5 py-3">
+                <div class="card h-100" id="Silent_Hill2">
+                    <img class="card-img-top" src="./public/img/silent.webp" alt="Silent Hill 2" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">Silent Hill 2</h5>
+                            <p class="card-text">$45.00</p>
+                            <p class="card-text stock-Silent_Hill2" id="stock_Silent_Hill2">Stock: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</section> 
+
+</body>   
