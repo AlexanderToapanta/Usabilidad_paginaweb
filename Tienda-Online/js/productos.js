@@ -120,9 +120,9 @@ function mostrarProductosGuardados() {
                 </div>
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div class="text-center">
-                    <a class="btn btn-primary" onclick="abrirModalEliminarProducto(this)">Eliminar producto</a>
+                    <button class="btn btn-outline-primary btn-sm" onclick="abrirModalEliminarProducto(this)">Eliminar producto</button>
                     <br><br>
-                    <a class="btn btn-primary" onclick="abrirModalActualizarProducto(this)">Actualizar</a>
+                    <button class="btn btn-outline-danger btn-sm" onclick="abrirModalActualizarProducto(this)">Actualizar</button>
                     </div>
                 </div>
             </div>
