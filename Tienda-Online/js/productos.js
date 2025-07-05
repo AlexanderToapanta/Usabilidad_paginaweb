@@ -1,4 +1,5 @@
 let idProductoSeleccionado = null;
+let productoAEliminar = null;
 const productos = {};
 function abrirModalProducto() {
     document.getElementById('modalProducto').style.display = 'flex';
@@ -111,6 +112,7 @@ function mostrarProductosGuardados() {
                 <div class="card-body p-4">
                     <div class="text-center">
                         <h5 class="fw-bolder">${producto.nombre}</h5>
+                        <p class="card-text">ID: ${producto.id}</p>
                         <p class="card-text">$${producto.precio}</p>
                         <p class="card-text stock-${producto.id}" id="stock_${producto.id}">Stock: ${producto.cantidad}</p>
                         <p class="card-text">Tipo: ${producto.tipo}</p>
@@ -118,7 +120,7 @@ function mostrarProductosGuardados() {
                 </div>
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div class="text-center">
-                    <a class="btn btn-primary" onclick="abrirModalEliminarProducto()">Eliminar producto</a>
+                    <a class="btn btn-primary" onclick="abrirModalEliminarProducto(this)">Eliminar producto</a>
                     <br><br>
                     <a class="btn btn-primary" onclick="abrirModalActualizarProducto(this)">Actualizar</a>
                     </div>
@@ -175,33 +177,55 @@ function mostraSegunTipo() {
 }
 
 
-function abrirModalEliminarProducto(){
-    document.getElementById('modalEliminarProducto').style.display = 'flex';
-    document.getElementById('nombreEliminarProducto').value = ''; // Limpiar el campo
+function abrirModalEliminarProducto(boton){
+    const card = boton.closest('.card');
+    const id = card.id;
+    const nombre = card.querySelector('h5.fw-bolder').textContent;
 
+    document.getElementById('idEliminarProducto').value = id;
+    document.getElementById('mensajeEliminarProducto').textContent = `¿Deseas eliminar el producto "${nombre}" (ID: ${id})?`;
+    document.getElementById('modalEliminarProducto').style.display = 'flex';
 }
+
 function cerrarModalEliminarProducto() {
     document.getElementById('modalEliminarProducto').style.display = 'none';
-    document.getElementById('nombreEliminarProducto').value = ''; // Limpiar el campo
+    document.getElementById('idEliminarProducto').value = '';
+    document.getElementById('mensajeEliminarProducto').textContent = '';
 }
+
 function eliminarProducto() {
-    const nombreEliminar = document.getElementById('nombreEliminarProducto').value.trim();
-    if (!nombreEliminar) {
-        alert('Por favor, ingresa el nombre del producto a eliminar.');
+    const id = document.getElementById('idEliminarProducto').value;
+    if (!id) {
+        alert('ID del producto no válido.');
         return;
     }
 
+    idProductoAEliminar = id;
+    abrirModalConfirmacion();
+}
+
+function abrirModalConfirmacion() {
+    document.getElementById('modalConfirmacionEliminar').style.display = 'flex';
+}
+
+function cerrarModalConfirmacion() {
+    document.getElementById('modalConfirmacionEliminar').style.display = 'none';
+}
+
+function confirmarEliminarProducto() {
     let productos = JSON.parse(localStorage.getItem('productos')) || [];
-    const index = productos.findIndex(p => p.nombre.toLowerCase() === nombreEliminar.toLowerCase());
+    const index = productos.findIndex(p => p.id === idProductoAEliminar);
 
     if (index === -1) {
         alert('Producto no encontrado.');
+        cerrarModalConfirmacion();
         return;
     }
 
     productos.splice(index, 1);
     localStorage.setItem('productos', JSON.stringify(productos));
 
+    cerrarModalConfirmacion();
     cerrarModalEliminarProducto();
     alert('Producto eliminado correctamente.');
 
@@ -296,4 +320,90 @@ async function actualizarProducto(boton) {
   }
 }
 
+function buscarProducto() {
+  const criterio = document.getElementById('criterioBusqueda').value;
+  const valor = document.getElementById('valorBusqueda').value.trim().toLowerCase();
+  const contenedor = document.getElementById("contenedor-productos-dinamicos");
+
+  let productos = JSON.parse(localStorage.getItem("productos"));
+  if (!Array.isArray(productos)) productos = [];
+
+  let resultados = [];
+
+  if (criterio === "id") {
+    resultados = productos.filter(p => p.id.toLowerCase() === valor);
+  } else if (criterio === "nombre") {
+    resultados = productos.filter(p => p.nombre.toLowerCase().includes(valor));
+  } else if (criterio === "tipo") {
+    resultados = productos.filter(p => p.tipo.toLowerCase() === valor);
+  }
+
+  if (resultados.length === 0) {
+    alert("El producto que busca no existe.");
+    contenedor.innerHTML = "<p>No se encontraron productos.</p>";
+    return;
+  }
+
+  contenedor.innerHTML = resultados.map(producto => `
+    <div class="col-md-5">
+      <div class="card h-100" id="${producto.id}">
+        <img class="card-img-top" src="${producto.imagen}" alt="${producto.nombre}" />
+        <div class="card-body p-4">
+          <div class="text-center">
+            <h5 class="fw-bolder">${producto.nombre}</h5>
+            <p class="card-text">ID: ${producto.id}</p>
+            <p class="card-text">$${producto.precio}</p>
+            <p class="card-text stock-${producto.id}" id="stock_${producto.id}">Stock: ${producto.cantidad}</p>
+            <p class="card-text">Tipo: ${producto.tipo}</p>
+          </div>
+        </div>
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+          <div class="text-center">
+            <a class="btn btn-primary" onclick="abrirModalEliminarProducto(this)">Eliminar producto</a>
+            <br><br>
+            <a class="btn btn-primary" onclick="abrirModalActualizarProducto(this)">Actualizar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function mostrarProductosAleatorios() {
+  const productos = JSON.parse(localStorage.getItem("productos")) || [];
+
+  if (productos.length === 0) return;
+
+  
+  const mezclados = productos.sort(() => 0.5 - Math.random());
+
+  const seleccionados = mezclados.slice(0, 4);
+
+  const contenedor = document.getElementById("productosDestacados");
+  contenedor.innerHTML = ""; 
+
+  seleccionados.forEach(producto => {
+    const card = document.createElement("div");
+    card.className = "col-md-3 mb-4";
+    card.innerHTML = `
+      <div class="card h-100">
+        <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}" />
+        <div class="card-body">
+          <h5 class="card-title">${producto.nombre}</h5>
+          <p class="card-text stock-${producto.id}" id="stock_${producto.id}">Stock: ${producto.cantidad}</p>
+          <p class="card-text">$${producto.precio}</p>
+        </div>
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+          <div class="text-center">
+            <a class="btn btn-outline-dark mt-auto" data-product="${producto.id}" 
+              onclick="agregarAlCarrito(this)" ${producto.cantidad === 0 ? "class='disabled' onclick='return false'" : ""}>
+              ${producto.cantidad === 0 ? "Sin stock" : "Add to cart"}
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+    contenedor.appendChild(card);
+  });
+}
 

@@ -46,14 +46,22 @@ function guardarUsuario() {
 
 
 function CerrarSesion() {
-    sesionActiva = false;
-    document.getElementById('btn_Login').style.display = 'inline-block';
-    document.getElementById('btn_usuario').style.display = 'none';
-    document.getElementById('btn_Stock').style.display = 'none';
-    document.getElementById('btn_admin').style.display = 'none';
-    cargarPaginas('index');
-}
+  sesionActiva = false;
 
+
+  document.getElementById('btn_Login').style.display = 'inline-block';
+
+  
+  document.getElementById('li_admin_dropdown').style.display = 'none';
+
+  document.getElementById('li_usuario_dropdown').style.display = 'none';
+
+
+  if (typeof cargarPaginas === 'function') {
+    cargarPaginas('index');
+  } 
+
+}
 function Login() {
   const emailInput = document.getElementById('txt_email_login');
   const passwordInput = document.getElementById('txt_password_login');
@@ -74,27 +82,32 @@ function Login() {
     sesionActiva = true;
     alert("Inicio de sesión como Administrador ");
     document.getElementById('btn_Login').style.display = 'none';
-    document.getElementById('btn_Stock').style.display = 'inline-block';
-    document.getElementById('btn_admin').style.display = 'inline-block';
+   document.getElementById('li_admin_dropdown').style.display = 'inline-block';
     cargarPaginas('index');
     return;
   }
 
-  // Buscar usuario en localStorage
+ 
   const personas = JSON.parse(localStorage.getItem("personas")) || [];
   const persona = personas.find(p => p.email === email && p.password === password);
 
-  if (persona) {
-    sesionActiva = true;
-    alert(`Bienvenido, ${persona.nombre}`);
-    localStorage.setItem("usuarioLogueado", JSON.stringify(persona));
-    document.getElementById('btn_Login').style.display = 'none';
-    document.getElementById('btn_usuario').style.display = 'inline-block';
-    cargarPaginas('index');
-  } else {
-    alert("Correo o contraseña incorrectos.");
-    emailInput.value = '';
-    passwordInput.value = '';
-    emailInput.focus();
-  }
+if (persona) {
+  sesionActiva = true;
+  alert(`Bienvenido, ${persona.nombre}`);
+  localStorage.setItem("usuarioLogueado", JSON.stringify(persona));
+  document.getElementById('btn_Login').style.display = 'none';
+
+  
+  const usuarioDropdown = document.getElementById('navbarDropdown_usuario');
+  usuarioDropdown.style.display = 'inline-block';  
+  usuarioDropdown.textContent = persona.nombre;    
+
+  document.getElementById('li_usuario_dropdown').style.display = 'inline-block';
+  cargarPaginas('index');
+} else {
+  alert("Correo o contraseña incorrectos.");
+  emailInput.value = '';
+  passwordInput.value = '';
+  emailInput.focus();
+}
 }
