@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Menú Videojuegos</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -19,21 +19,21 @@
         <ul class="submenu list-unstyled">
           <li><a href="#aventura">Aventura</a></li>
           <li><a href="#hackandslash">Hack and Slash</a></li>
-          <li><a href="#Terror">Terror</a></li>
+          <li><a href="#terror">Terror</a></li>
         </ul>
 
-        <a class="menu-item" href="#Consolas"><h5>Consolas</h5></a>
+        <a class="menu-item" href="#consolas"><h5>Consolas</h5></a>
         <ul class="submenu list-unstyled">
-          <li><a href="#Nintendo">Nintendo</a></li>
-          <li><a href="#Play">Play</a></li>
-          <li><a href="#Xbox">Xbox</a></li>
+          <li><a href="#nintendo">Nintendo</a></li>
+          <li><a href="#play">Play</a></li>
+          <li><a href="#xbox">Xbox</a></li>
         </ul>
 
-        <a class="menu-item" href="#Perifericos"><h5>Periféricos</h5></a>
+        <a class="menu-item" href="#perifericos"><h5>Periféricos</h5></a>
         <ul class="submenu list-unstyled">
-          <li><a href="#Mandos">Mandos</a></li>
-          <li><a href="#Audifonos">Audífonos</a></li>
-          <li><a href="#Cargadores">Cargadores</a></li>
+          <li><a href="#mandos">Mandos</a></li>
+          <li><a href="#audifonos">Audífonos</a></li>
+          <li><a href="#cargadores">Cargadores</a></li>
         </ul>
       </div>
     </div>
@@ -41,307 +41,73 @@
     <!-- Contenido principal -->
     <div class="col-md-9 p-4 sticky-sidebar">
 
-      <!-- AVENTURA -->
-      <section id="aventura">
-        <h2 class="mb-4">Aventura</h2>
+      <!-- SECCIÓN AVENTURA -->
+      <section id="aventura" class="mb-5">
+        <h2>Aventura</h2>
         <div class="row g-4">
-          <!-- Card -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="./public/img/rust.avif" class="card-img-top" alt="Rust">
-              <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-              <div class="card-body text-center">
-                <h5 class="fw-bolder">Rust</h5>
-                <span class="text-muted text-decoration-line-through">$40.00</span>
-                <p>$15.00</p>
-                <p id="stock_Rust">Stock: </p>
-              </div>
-              <div class="card-footer text-center bg-transparent border-0">
-                <a class="btn btn-outline-dark" onclick="agregarAlCarrito(this)">Add to cart</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="./public/img/baldurs.jpg" class="card-img-top" alt="Baldurs Gate 3">
-              <div class="card-body text-center">
-                <h5 class="fw-bolder">Baldurs Gate 3</h5>
-                <div class="text-warning mb-2">★★★★★</div>
-                <p>$50.00</p>
-                <p id="stock_Baldurs_Gate3">Stock: </p>
-              </div>
-              <div class="card-footer text-center bg-transparent border-0">
-                <a class="btn btn-outline-dark" onclick="agregarAlCarrito(this)">Add to cart</a>
-              </div>
-            </div>
-          </div>
-
-         
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="./public/img/skyrim.jpg" class="card-img-top" alt="Skyrim">
-              <div class="card-body text-center">
-                <h5 class="fw-bolder">Skyrim</h5>
-                <div class="text-warning mb-2">★★★★★</div>
-                <p>$40.00</p>
-                <p id="stock_Skyrim">Stock: </p>
-              </div>
-              <div class="card-footer text-center bg-transparent border-0">
-                <a class="btn btn-outline-dark" onclick="agregarAlCarrito(this)">Add to cart</a>
-              </div>
-            </div>
-          </div>
+          <!-- Aquí se insertarán las cards de aventura -->
         </div>
       </section>
 
-     
-      <section id="Terror" class="mt-5">
-        <h2 class="mb-4">Terror</h2>
+      <!-- SECCIÓN HACK AND SLASH -->
+      <section id="hackandslash" class="mb-5">
+        <h2>Hack and Slash</h2>
         <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card h-100">
-              <img src="./public/img/RE7.webp" class="card-img-top" alt="Resident Evil 7">
-              <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-              <div class="card-body text-center">
-                <h5 class="fw-bolder">Resident Evil 7</h5>
-                <div class="text-warning mb-2">★★★★★</div>
-                <span class="text-muted text-decoration-line-through">$20.00</span>
-                <p>$18.00</p>
-                <p id="stock_RE7">Stock: </p>
-              </div>
-              <div class="card-footer text-center bg-transparent border-0">
-                <a class="btn btn-outline-dark" onclick="agregarAlCarrito(this)">Add to cart</a>
-              </div>
-            </div>
-          </div>
+          <!-- Aquí se insertarán las cards de hack and slash -->
+        </div>
+      </section>
+      <!-- SECCIÓN TERROR -->
+      <section id="terror" class="mb-5">
+        <h2>Terror</h2>
+        <div class="row g-4">
+          <!-- Aquí se insertarán las cards de terror -->
+        </div>
+        </section>
 
-          
-          <div class="col-md-6">
-            <div class="card h-100">
-              <img src="./public/img/silent.webp" class="card-img-top" alt="Silent Hill 2">
-              <div class="card-body text-center">
-                <h5 class="fw-bolder">Silent Hill 2</h5>
-                <p>$45.00</p>
-                <p id="stock_Silent_Hill2">Stock: </p>
-              </div>
-              <div class="card-footer text-center bg-transparent border-0">
-                <a class="btn btn-outline-dark" onclick="agregarAlCarrito(this)">Add to cart</a>
-              </div>
-            </div>
-          </div>
+      <!-- SECCIÓN NINTENDO -->
+      <section id="nintendo" class="mb-5">
+        <h2>Nintendo</h2>
+        <div class="row g-4">
+          <!-- Aquí se insertarán las cards de Nintendo -->
         </div>
       </section>
 
-    <!-- HACK AND SLASH -->
-<section id="hackandslash" class="mt-5">
-  <h2 class="mb-4">Hack and Slash</h2>
-  <div class="row g-4">
-
-    <!-- Devil May Cry 5 -->
-    <div class="col-md-4">
-      <div class="card h-100 position-relative">
-        <img src="./public/img/DMC5.jpg" class="card-img-top" alt="Devil May Cry 5" />
-        <div class="card-body text-center">
-          <h5 class="fw-bolder">Devil May Cry 5</h5>
-          <p>$25.00</p>
-          <p id="stock_DMC5">Stock: </p>
+      <!-- Puedes añadir más secciones similares para otros tipos -->
+      <section id="play" class="mb-5">
+        <h2>Play</h2>
+        <div class="row g-4">
+          <!-- Aquí se insertarán las cards de Play -->
         </div>
-        <div class="card-footer text-center bg-transparent border-0">
-          <a class="btn btn-outline-dark" onclick="agregarAlCarrito(this)">Add to cart</a>
+      </section>
+      <section id="xbox" class="mb-5">
+        <h2>Xbox</h2>
+        <div class="row g-4">
+          <!-- Aquí se insertarán las cards de Xbox -->
         </div>
-      </div>
-    </div>
-
-    <!-- Bayonetta 3 -->
-    <div class="col-md-4">
-      <div class="card h-100 position-relative">
-        <img src="./public/img/Bayonetta-3.webp" class="card-img-top" alt="Bayonetta 3" />
-        <div class="card-body text-center">
-          <h5 class="fw-bolder">Popular Item</h5>
-          <h6 class="fw-bolder">Bayonetta 3</h6>
-          <div class="text-warning mb-2">★★★★★</div>
-          <p>$35.00</p>
-          <p id="stock_Bayonetta3">Stock: </p>
+      </section>
+      <section id="mandos" class="mb-5">
+        <h2>Mandos</h2>
+        <div class="row g-4">
+          <!-- Aquí se insertarán las cards de Mandos -->
         </div>
-        <div class="card-footer text-center bg-transparent border-0">
-          <a class="btn btn-outline-dark" onclick="agregarAlCarrito(this)">Add to cart</a>
+      </section>
+      <section id="audifonos" class="mb-5">
+        <h2>Audífonos</h2>
+        <div class="row g-4">
+          <!-- Aquí se insertarán las cards de Audífonos -->
         </div>
-      </div>
-    </div>
-
-    <!-- Fatal Fury -->
-    <div class="col-md-4">
-      <div class="card h-100 position-relative">
-        <img src="./public/img/fatalfury.jpg" class="card-img-top" alt="Fatal Fury" />
-        <div class="card-body text-center">
-          <h5 class="fw-bolder">New Arrive Item</h5>
-          <h6 class="fw-bolder">Fatal Fury</h6>
-          <div class="text-warning mb-2">★★★★★</div>
-          <p>$70.00</p>
-          <p id="stock_FatalFury">Stock: </p>
+      </section>
+      <section id="cargadores" class="mb-5">
+        <h2>Cargadores</h2>
+        <div class="row g-4">
+          <!-- Aquí se insertarán las cards de Cargadores -->
         </div>
-        <div class="card-footer text-center bg-transparent border-0">
-          <a class="btn btn-outline-dark" onclick="agregarAlCarrito(this)">Add to cart</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- Nintendo -->
-<section id="Nintendo" class="mt-5">
-  <h2>Switch</h2>
-  <div class="row">
-    <div class="col-md-5">
-      <div class="card h-100" id="Switch">
-        <img class="card-img-top" src="./public/img/switch.jpg" alt="Switch" />
-        <div class="card-body p-4">
-          <div class="text-center">
-            <h5 class="fw-bolder">Switch</h5>
-            <p class="card-text">$250.00</p>
-            <p class="card-text stock-Switch" id="stock_Switch">Stock: </p>
-          </div>
-        </div>
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-          <div class="text-center">
-            <a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Play -->
-<section id="Play" class="mt-5">
-  <h2>Play</h2>
-  <div class="row">
-    <div class="col-md-5">
-      <div class="card h-100" id="Play_Slim_4">
-        <img class="card-img-top" src="./public/img/play4s.jpg" alt="Play Slim 4" />
-        <div class="card-body p-4">
-          <div class="text-center">
-            <h5 class="fw-bolder">Play Slim 4</h5>
-            <p class="card-text">$25.00</p>
-            <p class="card-text stock-Play_Slim_4" id="stock_Play_Slim_4">Stock: </p>
-          </div>
-        </div>
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-          <div class="text-center">
-            <a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Xbox -->
-<section id="Xbox" class="mt-5">
-  <h2>Xbox</h2>
-  <div class="row">
-    <div class="col-md-5">
-      <div class="card h-100" id="Xbon_One_x">
-        <img class="card-img-top" src="./public/img/Xbox-One-X-Lead_Consol_Hrz_Family.jpg" alt="Xbox One x" />
-        <div class="card-body p-4">
-          <div class="text-center">
-            <h5 class="fw-bolder">Xbox One x</h5>
-            <p class="card-text">$400.00</p>
-            <p class="card-text stock-Xbon_One_x" id="stock_Xbon_One_x">Stock: </p>
-          </div>
-        </div>
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-          <div class="text-center">
-            <a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="Perifericos" class="mt-5">
-  <!-- Puedes agregar un título general si quieres -->
-</section>
-
-<section id="Mandos" class="mt-5">
-  <h2>Mandos</h2>
-  <div class="row">
-    <div class="col-md-5">
-      <div class="card h-100" id="Mando_PS5">
-        <img class="card-img-top" src="./public/img/mando.webp" alt="Mando PS5" />
-        <div class="card-body p-4">
-          <div class="text-center">
-            <h5 class="fw-bolder">New Arrive Item</h5>
-            <h5 class="fw-bolder">Mando PS5</h5>
-            <p class="card-text">$70.00</p>
-            <p class="card-text stock-Mando_PS5" id="stock_Mando_PS5">Stock: </p>
-          </div>
-        </div>
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-          <div class="text-center">
-            <a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="Audifonos" class="mt-5">
-  <h2>Audifonos</h2>
-  <div class="row">
-    <div class="col-md-5">
-      <div class="card h-100 position-relative" id="Audifonos_Argolla">
-        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-        <img class="card-img-top" src="./public/img/audifonos.jpeg" alt="Audífonos" />
-        <div class="card-body p-4">
-          <div class="text-center">
-            <h5 class="fw-bolder">Audifonos</h5>
-            <span class="text-muted text-decoration-line-through">$70.00</span>
-            <p class="card-text">$40.00</p>
-            <p class="card-text stock-Audifonos_Argolla" id="stock_Audifonos_Argolla">Stock: </p>
-          </div>
-        </div>
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-          <div class="text-center">
-            <a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="Cargadores" class="mt-5">
-  <h2>Cargadores</h2>
-  <div class="row">
-    <div class="col-md-5">
-      <div class="card h-100" id="Cargador_Ps4">
-        <img class="card-img-top" src="./public/img/cargador.webp" alt="Cargador PS4" />
-        <div class="card-body p-4">
-          <div class="text-center">
-            <h5 class="fw-bolder">Cargador PS4</h5>
-            <p class="card-text">$45.00</p>
-            <p class="card-text stock-Cargador_Ps4" id="stock_Cargador_Ps4">Stock: </p>
-          </div>
-        </div>
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-          <div class="text-center">
-            <a class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito(this)">Add to cart</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
-    
     </div>
   </div>
 </div>
-<div id="contenedor-productos-dinamicos" class="row gx-4 gx-lg-5 justify-content-center"></div>
 
 </body>
 </html>
