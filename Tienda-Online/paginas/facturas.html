@@ -8,25 +8,11 @@
 </head>
 <body>
   <div id="compras-container">
-    <div class="container my-4">
-  <div class="row align-items-center gy-2">
-    <div class="col-md-9">
-      <div class="d-flex flex-wrap gap-2 align-items-center">
-        <select id="criterioBusquedaFactura" class="form-select" style="max-width: 200px;">
-          <option value="id">Buscar por ID</option>
-          <option value="nombre">Buscar por Nombre</option>
-          <option value="apellido">Buscar por Apellido</option>
-          <option value="email">Buscar por Email</option>
-        </select>
-        <input type="text" id="valorBusquedaFactura" class="form-control" placeholder="Ingrese el valor" style="max-width: 300px;" />
-        <button class="btn btn-success" onclick="buscarFacturas()">Buscar</button>
-        <button class="btn btn-secondary" onclick="limpiarBusquedaFacturas()">Limpiar</button>
-      </div>
+    <div id="search-bar">
+      <span>Buscar por nombre o email:</span>
+      <input type="text" id="search-input" />
+      <button id="search-button">Buscar</button>
     </div>
-
-  </div>
-</div>
-
     <div id="facturas-listado">
       <!-- Aquí se inyectan las facturas -->
     </div>
